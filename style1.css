@@ -13,7 +13,6 @@ body{
     height: 100vh;
     background-position: center;
     background-size: cover;
-
 }
 .Register-Div{
     background:transparent;
@@ -97,3 +96,36 @@ body{
     text-decoration: underline;
     color: rgb(27, 3, 240);
 }
+
+
+button {
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em 0em 1em 1em;
+    border: 4px solid;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    z-index: 100;
+    transition: box-shadow 250ms, transform 250ms, filter 50ms;
+  }
+  button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 3px 0px black;
+  }
+  button:active {
+    filter: saturate(0.75);
+  }
+  button::after {
+    content: "";
+    text-align: center;
+    position: absolute;
+    inset: 0;
+    background-color: rgb(86, 96, 236);
+    z-index: -1;
+    transform: translateX(-100%);
+    transition: transform 200ms;
+  }
+  button:hover::after {
+    transform: translateX(0);
+  }
